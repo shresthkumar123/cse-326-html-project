@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1
+        }
+
+        header {
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00; /* Hover effect */
+        }
+
+        .hero {
+            background: url('nike2.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0; 
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            border: none;
+            background: #ffcc00;
+            color: #111;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero button:hover {
+            background: #ffd700;
+        }
+
+        .products, .about {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            
+        }
+
+        .product {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            width: 500px;
+            margin-right: 50px;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            
+            height: auto;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+       
+        
+
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d9edf7;
+}
+
+.brand-collaboration {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand-collaboration h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.brand-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.brand-logo {
+    width: 150px; /* Adjust the width as needed */
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.brand-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.brand-logo:hover img {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body><video autoplay loop muted class="video-background">
+    <source src="https://media.istockphoto.com/id/1210543409/video/details-hipster-walks-in-town-summer-season.mp4?s=mp4-640x640-is&k=20&c=zfwCoyaqTFn1S4cGPzyoCC2xkrxMapLcs52yxqsZjSE=" type="video/mp4">
+</video>
+    <script>
+        function scrollToProducts() {
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <header>
+        <div class="logo">Nike</div>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Just Do It</h1>
+        <p>Unleash your potential with Nike.</p>
+        <button onclick="scrollToProducts()">Shop Now</button>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Featured Products</h2>
+        <div class="product-list">
+            <div style="box-shadow: 10px 10px 15px 5px rgba(253, 236, 1, 0.5);" class="product">
+                <img src="shoes4.jpg" alt="Nike Shoe">
+                <h3>Nike Air Max</h3>
+                <p>$150.00</p>
+                <button>Add to Cart</button><br>
+                <button>Buy Now</button>
+
+            </div>
+            <div style="box-shadow: 10px 10px 15px 5px rgba(241, 8, 8, 0.5);" class="product"class="product">
+                <img src="shoes3.jpg" alt="Nike Shirt">
+                <h3>Nike Grey Jordan</h3>
+                <p>$40.00</p>
+                <button>Add to Cart</button><br>
+                <button>Buy Now</button>
+            </div>
+            <div style="box-shadow: 10px 10px 15px 5px rgba(246, 255, 0, 0.5);" class="product" class="product">
+                <img src="shoes2.jpg" alt="Nike Cap">
+                <h3>Nike GS Jordan</h3>
+                <p>$25.00</p>
+                <button>Add to Cart</button><br>
+                <button>Buy Now</button>
+            </div>
+            <div style="box-shadow: 10px 10px 15px 5px rgba(245, 2, 2, 0.5);" class="product" class="product">
+                <img src="shoe1.jpg" alt="Nike Socks">
+                <h3>Nike Sport Shoe</h3>
+                <p>$15.00</p>
+                <button>Add to Cart</button><br>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="products">
+        <h2>jacket</h2>
+        <div class="product-list">
+            <div style="box-shadow: 10px 10px 15px 5px rgba(253, 236, 1, 0.5);" class="product">
+                <img src="jacket4.jpg" alt="Nike Shoe">
+                <h3>Nike Sports Jacket</h3>
+                <p>$150.00</p>
+                <button>Add to Cart</button><br>
+                <button>Buy Now</button>
+
+            </div>
+            <div style="box-shadow: 10px 10px 15px 5px rgba(241, 8, 8, 0.5);" class="product"class="product">
+                <img src="jacket3.jpg" alt="Nike Shirt">
+                <h3>Nike Grey Jacket</h3>
+                <p>$40.00</p>
+                <button>Add to Cart</button><br>
+                <button>Buy Now</button>
+            </div>
+            <div style="box-shadow: 10px 10px 15px 5px rgba(246, 255, 0, 0.5);" class="product" class="product">
+                <img src="jacket2.png" alt="Nike Cap" style="height:300px">
+                <h3>Nike white jacket</h3>
+                <p>$25.00</p>
+                <button>Add to Cart</button><br>
+                <button>Buy Now</button>
+            </div>
+            <div style="box-shadow: 10px 10px 15px 5px rgba(245, 2, 2, 0.5);" class="product" class="product">
+                <img src="jacket1.jpg" alt="Nike Socks">
+                <h3>Nike bomber jacket</h3>
+                <p>$15.00</p>
+                <button>Add to Cart</button><br>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <b><p style="font-size:30px;color:#f4f4f4;">About us</p></b>
+        <p style="font-family:cursive;margin:120px 120px;font-size:20px;color:#b7f901;">Nike is a global leader in athletic footwear and apparel, committed to inspiring and innovating.Nike aims to bring inspiration and innovation to every athlete in the world. They believe that if you have a body, you are an athlete.Nike often emphasizes its involvement in communities through various initiatives and partnerships aimed at promoting physical activity and access to sports.</p>
+    </section>
+
+    
+
+
+    <section class="brand-collaboration">
+        <h2>Our Brand Collaborations</h2>
+        <div class="brand-logos">
+            <div class="brand-logo">
+                <a href="https://www.adidas.co.in/"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Brand 1"></a>
+            </div>
+            <div class="brand-logo">
+                <a href="https://in.puma.com/in/en"><img src="https://companieslogo.com/img/orig/PUM.DE_BIG-3030b719.png?t=1720244493" alt="Brand 2"></a>
+            </div>
+            <div class="brand-logo">
+                <a href="https://www.campusshoes.com/"><img src="https://i.pinimg.com/originals/0e/7d/19/0e7d19a04dd482e56a436e69854943e2.jpg" alt="Brand 3"></a>
+            </div>
+            
+        </div>
+    </section>
+    <footer id="contact">
+        <p>Contact us at: <a href="mailto:info@nike.com">info@nike.com</a></p>
+    </footer>
+</body>
+</html>
